@@ -1,0 +1,12 @@
+spring:
+  kafka:
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    listener:
+      type: BATCH
+      concurrency: 2
+      ack-mode: BATCH
+    consumer:
+      max-poll-records: 10
+      fetch-max-wait: 2s
+
